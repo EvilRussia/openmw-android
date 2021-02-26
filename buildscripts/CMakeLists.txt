@@ -49,8 +49,8 @@ set(LZ4_VERSION 1.9.2)
 set(LZ4_HASH SHA256=658ba6191fa44c92280d4aa2c271b0f4fbc0e34d249578dd05e50e76d0e5efcc)
 
 # https://github.com/OpenMW/openmw/commits/master
-set(OPENMW_VERSION 4b7d00530da0244f89e2b66c3eb1d0461bcc5327)
-set(OPENMW_HASH SHA256=71fd8fa44499e48758d4031259165e53a51226802d1049955da2631642194f62)
+set(OPENMW_VERSION 92300733c54ab3a6aec1f6c4275a0340ce3e0aa2)
+set(OPENMW_HASH SHA256=c1988330be9124ef0b61cedd28f2fb0db7569d2dc790de9027fe25baa13e23b7)
 
 # End of configurable options
 
@@ -455,6 +455,7 @@ set(OPENMW_PATCH
     patch -d <SOURCE_DIR> -p1 -t -N < ${CMAKE_SOURCE_DIR}/patches/openmw/0010-android-fix-context-being-lost-on-app-minimize.patch &&
 	patch -d <SOURCE_DIR> -p1 -t -N < ${CMAKE_SOURCE_DIR}/patches/openmw/0013-android-Update-default-settings-for-android.patch &&
 	patch -d <SOURCE_DIR> -p1 -t -N < ${CMAKE_SOURCE_DIR}/patches/openmw/0014-settingswindow-save-user-settings-file-when-ok-is-pr.patch &&
+	patch -d <SOURCE_DIR> -p1 -t -N < ${CMAKE_SOURCE_DIR}/patches/openmw/fix-build.patch &&
 	cp ${CMAKE_SOURCE_DIR}/patches/openmw/android_main.cpp <SOURCE_DIR>/apps/openmw/android_main.cpp
 )
 
